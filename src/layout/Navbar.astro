@@ -1,3 +1,7 @@
+---
+import $ from "jquery";
+---
+
 <div id="nav-top" class="border-bottom py-lg-3">
   <div
     class="container d-lg-flex d-none justify-content-between align-items-center"
@@ -51,17 +55,22 @@
         <li class="nav-item dropdown position-relative">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
+            data-bs-auto-close="outside"
             data-bs-toggle="dropdown"
-            aria-expanded="false">Resources</a
+            aria-expanded="false"
           >
+            Resources
+          </a>
 
           <div
+            id="ddmenu"
             class="dropdown-menu shadow position-absolute rounded-1 py-4"
             aria-labelledby="dropdownMenuButton"
             x-placement="bottom-start"
           >
-            <div class="mega-menu gap-5 justify-content-around d-flex">
+            <div
+              class="mega-menu mx-auto row row-cols-2 row-cols-lg-3 g-lg-5 g-1 gx-5"
+            >
               <div>
                 <h3 class="">Education</h3>
                 <ul class="list-unstyled border-primary">
@@ -140,7 +149,18 @@
     </div>
   </div>
 </nav>
-
+<script>
+  $(document).ready(function () {
+    $(".dropdown-menu a").on("click", function () {
+      // Find the closest dropdown and remove the 'show' class
+      $(this).closest(".dropdown-menu").removeClass("show");
+      $(this)
+        .closest(".dropdown")
+        .find(".dropdown-toggle")
+        .attr("aria-expanded", "false");
+    });
+  });
+</script>
 <style>
   .mega-menu li:not(:last-child) {
     margin-bottom: 12px;
@@ -192,5 +212,22 @@
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 80vw;
+  }
+  @media (max-width: 992px) {
+    .dropdown-menu {
+      width: 100vw;
+    }
+    .dropdown-menu a {
+      font-size: small;
+    }
+    .mega-menu li:not(:last-child) {
+      margin-bottom: 0;
+    }
+    .mega-menu {
+      gap: 0px auto;
+    }
+    .mega-menu ul {
+      margin-top: 0;
+    }
   }
 </style>

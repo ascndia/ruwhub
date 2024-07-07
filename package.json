@@ -14,5 +14,8 @@
     "astro": "^4.11.5",
     "bootstrap": "^5.3.3",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30"
   }
 }
