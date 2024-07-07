@@ -1,0 +1,68 @@
+---
+import Img from "../assets/hero.png";
+import { Image } from "astro:assets";
+---
+
+<header id="home" class="h-100 w-100">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <Image
+          id="hero-image"
+          src={Img}
+          class="d-block mx-lg-auto img-fluid"
+          alt="Bootstrap Themes"
+          width="700"
+          height="500"
+          loading="lazy"
+        />
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+          Grow better with Ruwhub
+        </h1>
+        <p class="lead">
+          Software that's powerful, not overpowering. Seamlessly connect your
+          data, teams, and customers on one AI-powered customer platform that
+          grows with your business.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-prim btn-lg py-3 px-5 me-md-2"
+            >Get a Demo</button
+          >
+          <button type="button" class="btn btn-sec btn-lg py-3 px-5"
+            >Get Started Free</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  :root {
+    --primary: #ff6f00;
+    --secondary: #151079;
+    --ternary: rgb(102, 102, 102);
+  }
+  #home {
+    background-color: #fff2e9;
+  }
+  #hero-image {
+    box-shadow: 0px 0px 0px 8px var(--primary);
+    -webkit-box-shadow: 0px 0px 0px 8px var(--primary);
+    -moz-box-shadow: 0px 0px 0px 8px var(--primary);
+    border-radius: 2px;
+  }
+  .btn {
+    font-weight: 600;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import Card from "../component/FeatureCard.astro";
+import { FEATURES } from "../constant/feature.ts";
+---
+
+<section
+  id="feature"
+  style="background-color: #fff2e9;"
+  class="section py-5"
+  id="feature"
+>
+  <div class="container">
+    <div class="row g-4 row-cols-md-2 row-cols-lg-3 gx-2">
+      {FEATURES.map((f) => <Card {...f} />)}
+    </div>
+  </div>
+</section>

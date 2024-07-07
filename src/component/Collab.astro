@@ -1,0 +1,65 @@
+---
+import Img from "../assets/collab.png";
+import { Image } from "astro:assets";
+---
+
+<section id="collab" class="pt-5 px-4">
+  <div class="text-center">
+    <div class="container mt-5 px-5">
+      <Image
+        src={Img}
+        class="img-fluid border rounded-3 shadow-lg mb-4"
+        alt="Example image"
+        width="700"
+        height="500"
+        loading="lazy"
+      />
+    </div>
+    <h1 class="fs-2 my-4 fw-bold text-body-emphasis">
+      Your whole front office. One customer platform.
+    </h1>
+    <div style="width: 75vw;" class="col-lg-6 mx-auto">
+      <p style="text-align: justify;" class="text-secondary lead mb-4">
+        Ruwhub brings your marketing, sales, and service teams together on the
+        same AI-powered customer platform. It's easy to use, provides value
+        fast, and gives all teams a unified view of the customer at every stage
+        in their journey. Each product in the platform is powerful on its own,
+        but the real magic happens when you use them together.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-prim btn-lg px-4 me-sm-3"
+          >Get a Demo</button
+        >
+        <button type="button" class="btn btn-sec btn-lg px-4"
+          >Get Started Free</button
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  :root {
+    --primary: #ff6f00;
+    --secondary: #151079;
+    --ternary: rgb(102, 102, 102);
+  }
+  #about {
+    background-color: #fff2e9;
+    /* height: 100vh; */
+  }
+  .lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .btn {
+    font-weight: 600;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import logo1 from "../assets/logo/bri.svg";
+import logo2 from "../assets/logo/bukalapak.svg";
+import logo3 from "../assets/logo/comifuro.svg";
+import logo4 from "../assets/logo/lippo.svg";
+import logo5 from "../assets/logo/bri.svg";
+import logo6 from "../assets/logo/tp.svg";
+import logo7 from "../assets/logo/telkom.svg";
+import logo8 from "../assets/logo/gojek.svg";
+---
+
+<section id="company" class="w-100 py-5">
+  <div class="container w-100">
+    <div
+      class="d-flex mx-auto align-items-center justify-content-center flex-column"
+    >
+      <p class="fw-semibold fs-5">
+        216,000+ customers in over 135 countries grow their businesses with
+        Ruwhub
+      </p>
+      <div class="logos">
+        <div class="logos-slide">
+          <img src={logo1.src} />
+          <img src={logo2.src} />
+          <img src={logo3.src} />
+          <img src={logo4.src} />
+          <img src={logo5.src} />
+          <img src={logo6.src} />
+          <img src={logo7.src} />
+          <img src={logo8.src} />
+        </div>
+        <div class="logos-slide">
+          <img src={logo1.src} />
+          <img src={logo2.src} />
+          <img src={logo3.src} />
+          <img src={logo4.src} />
+          <img src={logo5.src} />
+          <img src={logo6.src} />
+          <img src={logo7.src} />
+          <img src={logo8.src} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+  }
+</style>

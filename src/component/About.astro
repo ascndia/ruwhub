@@ -1,0 +1,78 @@
+---
+import Img from "../assets/about.png";
+import { Image } from "astro:assets";
+---
+
+<section id="about" class="w-100">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <Image
+          id="hero-image"
+          src={Img}
+          class="d-block mx-lg-auto img-fluid"
+          alt="Bootstrap Themes"
+          width="700"
+          height="500"
+          loading="lazy"
+        />
+      </div>
+      <div class="col-lg-6">
+        <h1 class="fs-1 fw-bold text-body-emphasis lh-1 mb-3">
+          What is Ruwhub?
+        </h1>
+        <p class="lead">
+          Ruwhub is an AI-powered customer platform with all the software,
+          integrations, and resources you need to connect your marketing, sales,
+          and customer service. Ruwhub's connected platform enables you to grow
+          your business faster by focusing on what matters most: your customers.
+        </p>
+        <p class="lead">
+          Get a demo to learn about our premium software, or get started with
+          our full suite of free tools and upgrade as you grow.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-prim btn-lg py-2 px-4 me-md-2"
+            >Get a Demo</button
+          >
+          <button type="button" class="btn btn-sec btn-lg py-2 px-4"
+            >Get Started Free</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --primary: #ff6f00;
+    --secondary: #151079;
+    --ternary: rgb(102, 102, 102);
+  }
+  #about {
+    background-color: #fff2e9;
+    /* height: 100vh; */
+  }
+  .lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  #hero-image {
+    box-shadow: 0px 0px 0px 8px var(--primary);
+    -webkit-box-shadow: 0px 0px 0px 8px var(--primary);
+    -moz-box-shadow: 0px 0px 0px 8px var(--primary);
+    border-radius: 2px;
+  }
+  .btn {
+    font-weight: 600;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+</style>

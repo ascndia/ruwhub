@@ -1,0 +1,73 @@
+---
+export interface Props {
+  title: string;
+  desc: string;
+  features: string[];
+  icon: string;
+}
+
+const { title, desc, features, icon } = Astro.props;
+---
+
+<div class="col-12 col-md-6 col-lg-4">
+  <div
+    style="padding-left: 36px; padding-right: 36px;"
+    class="card border-0 rounded-3 py-4 w-100 feature"
+  >
+    <div class="d-flex mt-4 align-items-center">
+      <img style="width: 36px;" src={icon} alt="" />
+      <div class="fs-4 ms-2 fw-semibold">{title}</div>
+    </div>
+    <div class="mt-4 pb-4 border-bottom">
+      {desc}
+    </div>
+    <div class="mt-4">
+      <p>Popular Features</p>
+
+      <ul class="ps-0 mt-4">
+        {
+          features.map((feature) => (
+            <li class="d-flex gap-2">
+              <i class="bi bi-check-circle-fill" />
+              <div>{feature}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <button class="btn fw-semibold fs-5 mt-3"> Learn More </button>
+  </div>
+</div>
+
+<style>
+  .card {
+    transition: 500ms;
+  }
+  .card:hover {
+    background-color: #f6f6ff;
+    transform: scale(1.02);
+  }
+  .btn {
+    background-color: var(--primary);
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  :root {
+    --primary: #ff6f00;
+    --secondary: #151079;
+    --ternary: rgb(102, 102, 102);
+  }
+
+  li {
+    list-style: none;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 8px;
+    align-items: center;
+  }
+  li i {
+    font-size: 18px;
+    color: var(--primary);
+  }
+</style>

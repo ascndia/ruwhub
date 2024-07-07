@@ -1,0 +1,69 @@
+---
+import Card from "./ServiceCard.astro";
+import { SERVICES } from "../constant/service.ts";
+---
+
+<section id="service" class="py-5 px-4">
+  <div class="container text-center">
+    <h1 class="fs-2 my-4 fw-bold text-body-emphasis">
+      Ruwhub is already easy to use. But we’re still here for you.
+    </h1>
+    <div class="mx-auto" style="width: 75vw; font-size: 18px; ">
+      We’re here to help your whole team stay ahead of the curve as you grow.
+    </div>
+    <div class="row px-4 mt-3 g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+      {SERVICES.map((s) => <Card {...s} />)}
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    background-color: #f6f9fc;
+  }
+  :root {
+    --primary: #ff6f00;
+    --secondary: #151079;
+    --ternary: rgb(102, 102, 102);
+  }
+  .card a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  img {
+    object-fit: contain;
+    height: fit-content;
+  }
+  .card {
+    min-height: 580px;
+    padding-bottom: 4px;
+  }
+  .card p {
+    margin-top: 20px;
+    word-spacing: 2px;
+    font-weight: 400;
+  }
+  .card h5 {
+    font-size: 28px;
+  }
+
+  .card p,
+  .card h5 {
+    text-align: start;
+  }
+
+  .lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .btn {
+    font-weight: 600;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+</style>
