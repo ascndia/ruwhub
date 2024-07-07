@@ -35,7 +35,7 @@ const { title, desc, features, icon } = Astro.props;
         }
       </ul>
     </div>
-    <button class="btn fw-semibold fs-5 mt-3"> Learn More </button>
+    <button class="btn btn-prim fw-semibold fs-5 mt-3"> Learn More </button>
   </div>
 </div>
 
@@ -48,10 +48,26 @@ const { title, desc, features, icon } = Astro.props;
     transform: scale(1.02);
   }
   .btn {
-    background-color: var(--primary);
-    color: white;
     padding-top: 14px;
     padding-bottom: 14px;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-prim:hover {
+    background-color: var(--primary-hover);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    background-color: var(--primary-outline);
+    color: var(--primary);
+  }
+  .btn-sec:hover {
+    border: 2px solid var(--primary-hover);
+    background-color: var(--primary-outline-hover);
+    color: var(--primary);
   }
   :root {
     --primary: #ff6f00;

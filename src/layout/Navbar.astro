@@ -142,9 +142,7 @@ import $ from "jquery";
         </li>
       </ul>
       <div class="d-lg-flex col-lg-3 my-3 my-lg-0 justify-content-lg-end">
-        <button id="freedemobtn" class="btn fw-bold btn-lg"
-          >Start a free demo</button
-        >
+        <button class="btn btn-prim fw-bold btn-lg">Start a free demo</button>
       </div>
     </div>
   </div>
@@ -179,7 +177,7 @@ import $ from "jquery";
     color: rgb(103, 103, 103);
     transition: 300ms;
   }
-  a:hover {
+  a:not(.navbar-brand):hover {
     color: var(--secondary);
     text-decoration: underline;
   }
@@ -194,6 +192,24 @@ import $ from "jquery";
   #freedemobtn {
     background-color: var(--primary);
     color: white;
+  }
+  .btn-prim {
+    background-color: var(--primary);
+    color: white;
+  }
+  .btn-prim:hover {
+    background-color: var(--primary-hover);
+    color: white;
+  }
+  .btn-sec {
+    border: 2px solid var(--primary);
+    background-color: var(--primary-outline);
+    color: var(--primary);
+  }
+  .btn-sec:hover {
+    border: 2px solid var(--primary-hover);
+    background-color: var(--primary-outline-hover);
+    color: var(--primary);
   }
   .navbar {
     top: 0;

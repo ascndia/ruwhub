@@ -42,8 +42,13 @@ import { Image } from "astro:assets";
 <style>
   :root {
     --primary: #ff6f00;
+    --primary-hover: #e26200;
+    --primary-outline: #fffaf5;
+    --primary-outline-hover: #ffeddf;
     --secondary: #151079;
+    --secondary-hover: #534dca;
     --ternary: rgb(102, 102, 102);
+    --ternary-hover: rgb(102, 102, 102);
   }
   #home {
     background-color: #fff2e9;
@@ -61,8 +66,18 @@ import { Image } from "astro:assets";
     background-color: var(--primary);
     color: white;
   }
+  .btn-prim:hover {
+    background-color: var(--primary-hover);
+    color: white;
+  }
   .btn-sec {
     border: 2px solid var(--primary);
+    background-color: var(--primary-outline);
+    color: var(--primary);
+  }
+  .btn-sec:hover {
+    border: 2px solid var(--primary-hover);
+    background-color: var(--primary-outline-hover);
     color: var(--primary);
   }
 </style>
